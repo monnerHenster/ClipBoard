@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title id="dynamic-title">默认标题</title>
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const customTitle = urlParams.get('title');
+    if (customTitle) {
+      document.title = decodeURIComponent(customTitle);
+    }
+  </script>
+</head>
+<body></body>
+</html>
